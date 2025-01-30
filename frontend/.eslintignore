@@ -1,0 +1,37 @@
+# .eslintignore
+
+# Pastas geradas automaticamente
+node_modules/
+dist/
+build/
+out/
+.next/
+.cache/
+coverage/
+storybook-static/
+.DS_Store
+
+# Arquivos de configuração (opcional)
+.eslintrc.js
+.prettierrc
+*.config.js
+
+# Arquivos de declaração TypeScript gerados (se aplicável)
+**/*.d.ts
+
+# Logs e temporários
+*.log
+*.tmp
+temp/
+
+# Arquivos ignorados pelo Git (se já estiverem no .gitignore)
+.gitignore
+.editorconfig
+
+# Arquivos de teste específicos (se não quiser lint)
+**/__tests__/
+**/__mocks__/
+
+# Exceções para arquivos markdown ou outros (opcional)
+**/*.md
+**/*.mdx
