@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 import express, { Express, Request, Response } from 'express';
 import cors from 'cors';
 import db from './config/db';
+import userRouter from './routes/signUpRouter';
 
 (async (): Promise<void> => {
   await db();
@@ -19,9 +20,13 @@ app.use(
   }),
 );
 
+app.use(express.json());
+
 app.get('/', (req: Request, res: Response): void => {
   res.send('Hello, World!');
 });
+
+app.use('/v1', userRouter);
 
 app.listen(port, (): void => {
   console.log('Server started on port: ' + port);
