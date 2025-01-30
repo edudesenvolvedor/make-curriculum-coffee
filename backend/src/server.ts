@@ -1,8 +1,18 @@
+import dotenv from "dotenv";
 import express, { Express, Request, Response } from 'express';
+import cors from 'cors';
 
-const port:string = process.env.PORT || "5000";
+dotenv.config({
+  path: '../.env',
+});
+
+const port:string = process.env.SERVER_PORT || "5000";
 
 const app: Express = express();
+
+app.use(cors({
+  origin: ["*"]
+}));
 
 app.get("/", (req: Request, res: Response): void => {
   res.send("Hello, World!");
