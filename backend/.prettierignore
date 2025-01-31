@@ -1,0 +1,46 @@
+# .prettierignore
+
+# Pastas geradas
+node_modules/
+dist/
+build/
+.next/
+.cache/
+coverage/
+storybook-static/
+.DS_Store
+
+# Arquivos de configuração e lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+*.config.js
+*.config.ts
+
+# Arquivos binários e logs
+*.log
+*.tmp
+*.min.*
+*.pdf
+*.jpg
+*.png
+*.svg
+
+# Arquivos de declaração TypeScript
+**/*.d.ts
+
+# Arquivos de teste (se não quiser formatar)
+**/__tests__/
+**/__mocks__/
+**/*.test.*
+**/*.spec.*
+
+# Documentação e arquivos de texto
+**/*.md
+**/*.mdx
+**/*.txt
+
+# Outros (personalize conforme seu projeto)
+public/
+.env
+.env.local
